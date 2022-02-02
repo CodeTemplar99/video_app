@@ -10,49 +10,55 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
-        alignment: Alignment.center,
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset(
-            "assets/images/logo.png",
-            width: 250,
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 38.0),
-            child: TextFormField(
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  hintText: 'Enter your mobile number'),
+      body: SafeArea(
+        child: Container(
+          alignment: Alignment.center,
+          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+            SizedBox(
+              height: 120,
             ),
-          ),
-          SizedBox(height: 30),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 48.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => OtpScreen(),
-                  ),
-                );
-              },
-              child: Text(
-                "Next",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+            Image.asset(
+              'assets/images/logo.png',
+              width: 250,
+            ),
+            SizedBox(
+              height: 150,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 38.0),
+              child: TextFormField(
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    hintText: 'Enter your mobile number'),
               ),
-              style: ElevatedButton.styleFrom(minimumSize: Size.fromHeight(50)),
             ),
-          ),
-        ]),
+            SizedBox(height: 30),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 48.0),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => OtpScreen(),
+                    ),
+                  );
+                },
+                child: Text(
+                  'Next',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                style:
+                    ElevatedButton.styleFrom(minimumSize: Size.fromHeight(50)),
+              ),
+            ),
+          ]),
+        ),
       ),
     );
   }
