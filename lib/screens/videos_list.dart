@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:video_app/components/app_bar.dart';
-import 'package:video_app/components/floating_button.dart';
+import 'package:video_app/components/custom_nav_bar.dart';
+import 'package:video_app/components/divider_line.dart';
 import 'package:video_app/components/list_item.dart';
+import 'package:video_app/components/search_input.dart';
 
 class VideosList extends StatelessWidget {
   const VideosList({
@@ -18,32 +20,11 @@ class VideosList extends StatelessWidget {
         child: Container(
           child: Column(
             children: [
-              Divider(
-                thickness: 0.5,
-                color: Colors.grey,
-                height: 20,
-              ),
+              DividerLine(),
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 28.0),
-                child: TextField(
-                  onChanged: (value) {},
-                  decoration: InputDecoration(
-                    hintText: "Search video...",
-                    hintStyle: TextStyle(
-                      fontSize: 15,
-                      color: Colors.black,
-                    ),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    suffixIcon: Icon(Icons.search),
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                  ),
-                ),
-              ),
+              SearchInput(),
               SizedBox(
                 height: 10,
               ),
@@ -52,7 +33,7 @@ class VideosList extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingButton(),
+      bottomNavigationBar: CustomNavBar(),
     );
   }
 }
