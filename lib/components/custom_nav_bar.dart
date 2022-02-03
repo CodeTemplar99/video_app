@@ -86,12 +86,9 @@ class CustomNavBar extends StatelessWidget {
                 icon: Icons.add,
                 title: "New",
                 press: () {
-                  Navigator.replace(
+                  Navigator.push(
                     context,
-                    oldRoute: MaterialPageRoute(
-                      builder: (context) => VideoDetail(),
-                    ),
-                    newRoute: MaterialPageRoute(
+                    MaterialPageRoute(
                       builder: (context) => VideosList(),
                     ),
                   );
