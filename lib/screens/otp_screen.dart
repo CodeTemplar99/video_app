@@ -54,7 +54,6 @@ class OtpScreenState extends State<OtpScreen> {
                         fieldsCount: 5,
                         // onSubmit: (String pin) => _showSnackBar(pin, context),
                         focusNode: _pinPutFocusNode,
-                        controller: _pinPutController,
                         submittedFieldDecoration: _pinPutDecoration.copyWith(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
@@ -73,7 +72,7 @@ class OtpScreenState extends State<OtpScreen> {
                       children: <Widget>[
                         Text('Did not get otp'),
                         TextButton(
-                          onPressed: () => _pinPutController.text = '',
+                          onPressed: () => {},
                           child: const Text('resend'),
                         ),
                       ],
@@ -85,7 +84,7 @@ class OtpScreenState extends State<OtpScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => OtpScreen(),
+                              builder: (context) => VideosList(),
                             ),
                           );
                         },

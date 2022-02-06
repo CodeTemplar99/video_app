@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:video_app/screens/upload_screen.dart';
 
 class VideoDetail extends StatelessWidget {
   const VideoDetail({Key? key}) : super(key: key);
@@ -205,7 +206,12 @@ class VideoDetail extends StatelessWidget {
                             ),
                           ),
                           IconButton(
-                              onPressed: () {}, icon: Icon(Icons.send_rounded))
+                              onPressed: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => UploadScreen()),
+                                  ),
+                              icon: Icon(Icons.send_rounded))
                         ],
                       ),
                     )
