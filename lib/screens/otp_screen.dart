@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:pinput/pin_put/pin_put.dart';
 import 'package:video_app/screens/videos_list.dart';
 
-import 'package:flutter/material.dart';
-
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
 
@@ -14,7 +12,7 @@ class OtpScreen extends StatefulWidget {
 }
 
 class OtpScreenState extends State<OtpScreen> {
-  final TextEditingController _pinPutController = TextEditingController();
+  // final TextEditingController _pinPutController = TextEditingController();
   final FocusNode _pinPutFocusNode = FocusNode();
 
   BoxDecoration get _pinPutDecoration {
@@ -49,7 +47,7 @@ class OtpScreenState extends State<OtpScreen> {
                     Container(
                       color: Colors.white,
                       margin: const EdgeInsets.symmetric(horizontal: 40.0),
-                      padding: const EdgeInsets.all(40.0),
+                      padding: const EdgeInsets.all(30.0),
                       child: PinPut(
                         fieldsCount: 5,
                         // onSubmit: (String pin) => _showSnackBar(pin, context),

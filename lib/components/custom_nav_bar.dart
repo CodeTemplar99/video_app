@@ -88,9 +88,7 @@ class CustomNavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => CameraScreen(
-                        cameras: [],
-                      ),
+                      builder: (context) => CameraScreen(),
                     ),
                   );
                 },
