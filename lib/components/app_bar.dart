@@ -25,7 +25,7 @@ AppBar baseBar() {
             icon: ClipOval(
               child: Icon(
                 Icons.notifications_none_rounded,
-                size: 35.0,
+                size: 25.0,
                 color: Colors.black,
               ),
             )),

@@ -1,25 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:video_app/components/app_bar.dart';
-import 'package:video_app/components/divider_line.dart';
-import 'package:video_thumbnail/video_thumbnail.dart';
 
 class VideoDetail extends StatelessWidget {
   const VideoDetail({Key? key}) : super(key: key);
-
-  dyanamic() async {
-    final fileName = await VideoThumbnail.thumbnailFile(
-      video:
-          "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4",
-      thumbnailPath:
-          (await getTemporaryDirectory('assets/images/logo.png')).path,
-      imageFormat: ImageFormat.PNG,
-      maxHeight:
-          64, // specify the height of the thumbnail, let the width auto-scaled to keep the source aspect ratio
-      quality: 75,
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,18 +25,11 @@ class VideoDetail extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              DividerLine(),
-              SizedBox(
-                height: 10,
-              ),
-              SizedBox(
-                height: 20,
-              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
                 child: SizedBox(
                   height: 250,
-                  width: 370,
+                  width: 300,
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       color: Colors.black45,

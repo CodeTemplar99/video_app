@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:video_app/constants.dart';
-import 'package:video_app/home_screen.dart';
-import 'package:video_app/screens/video_detail.dart';
+import 'package:video_app/screens/record_screen.dart';
 import 'package:video_app/screens/videos_list.dart';
 
 class NavItem extends StatelessWidget {
@@ -89,7 +88,9 @@ class CustomNavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => VideosList(),
+                      builder: (context) => CameraScreen(
+                        cameras: [],
+                      ),
                     ),
                   );
                 },
