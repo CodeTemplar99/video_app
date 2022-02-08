@@ -79,7 +79,7 @@ class OtpScreenState extends State<OtpScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 48.0),
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                               builder: (context) => VideosList(),
@@ -87,7 +87,7 @@ class OtpScreenState extends State<OtpScreen> {
                           );
                         },
                         child: Text(
-                          'Next',
+                          'Verify mobile',
                           style: TextStyle(
                             fontSize: 20,
                           ),
