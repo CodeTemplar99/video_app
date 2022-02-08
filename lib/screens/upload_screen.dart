@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:video_app/components/app_bar.dart';
 
 class UploadScreen extends StatelessWidget {
   const UploadScreen({Key? key}) : super(key: key);
@@ -10,17 +11,8 @@ class UploadScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Colors.black,
-              )),
+        appBar: baseBar(
+          title: Text("hello"),
         ),
         body: SafeArea(
           child: SingleChildScrollView(

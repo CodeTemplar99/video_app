@@ -7,11 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:video_app/home_screen.dart';
 
-// void main() async {
-//   // WidgetsFlutterBinding.ensureInitialized();
-//   // final cameras = await availableCameras();
-//   runApp(MyApp(cameras: [],));
-// }
 List<CameraDescription> cameras = [];
 
 Future<void> main() async {
@@ -40,8 +35,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Video App',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          systemOverlayStyle: SystemUiOverlayStyle.dark,
+        appBarTheme: AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
         brightness: Brightness.light,
         primarySwatch: Colors.blue,

@@ -15,7 +15,7 @@ class VideosList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: baseBar(),
+      appBar: baseBar(title: Text('hello')),
       body: SingleChildScrollView(
         child: Container(
           child: Column(

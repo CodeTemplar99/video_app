@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-AppBar baseBar() {
+AppBar baseBar({title}) {
   return AppBar(
+    systemOverlayStyle: SystemUiOverlayStyle.dark,
     backgroundColor: Colors.transparent,
     elevation: 0,
     title: Text(
@@ -19,17 +21,15 @@ AppBar baseBar() {
     ),
     actions: [
       Padding(
-        padding: const EdgeInsets.only(right: 15.0),
-        child: IconButton(
+          padding: const EdgeInsets.only(right: 15.0),
+          child: IconButton(
             onPressed: () {},
-            icon: ClipOval(
-              child: Icon(
-                Icons.notifications_none_rounded,
-                size: 25.0,
-                color: Colors.black,
-              ),
-            )),
-      )
+            icon: Icon(
+              Icons.notifications_none_rounded,
+              size: 25.0,
+              color: Colors.black,
+            ),
+          )),
     ],
   );
 }
